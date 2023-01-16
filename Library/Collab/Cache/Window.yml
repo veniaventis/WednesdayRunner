@@ -13,60 +13,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
-    m_Keys:
-    - .collabignore
-    - Assets/Materials.meta
-    - Assets/Materials/Ground.mat
-    - Assets/Materials/Ground.mat.meta
-    - Assets/Materials/Player.mat
-    - Assets/Materials/Player.mat.meta
-    - Assets/Materials/floor.mat
-    - Assets/Materials/floor.mat.meta
-    - Assets/Models.meta
-    - Assets/Models/hall.obj
-    - Assets/Models/hall.obj.meta
-    - Assets/Scenes.meta
-    - Assets/Scenes/SampleScene.unity
-    - Assets/Scenes/SampleScene.unity.meta
-    - Assets/Scripts.meta
-    - Assets/Scripts/CameraController.cs
-    - Assets/Scripts/CameraController.cs.meta
-    - Assets/Scripts/PlayerController.cs
-    - Assets/Scripts/PlayerController.cs.meta
-    - Assets/Scripts/SwipeController.cs
-    - Assets/Scripts/SwipeController.cs.meta
-    - Assets/Scripts/TileGenerator.cs
-    - Assets/Scripts/TileGenerator.cs.meta
-    - Assets/Tiles.meta
-    - Assets/Tiles/Tile1.prefab
-    - Assets/Tiles/Tile1.prefab.meta
-    - Assets/Tiles/Tile2.prefab
-    - Assets/Tiles/Tile2.prefab.meta
-    - Assets/Tiles/Tile3.prefab
-    - Assets/Tiles/Tile3.prefab.meta
-    - Packages/manifest.json
-    - Packages/packages-lock.json
-    - ProjectSettings/AudioManager.asset
-    - ProjectSettings/ClusterInputManager.asset
-    - ProjectSettings/DynamicsManager.asset
-    - ProjectSettings/EditorBuildSettings.asset
-    - ProjectSettings/EditorSettings.asset
-    - ProjectSettings/GraphicsSettings.asset
-    - ProjectSettings/InputManager.asset
-    - ProjectSettings/MemorySettings.asset
-    - ProjectSettings/NavMeshAreas.asset
-    - ProjectSettings/Physics2DSettings.asset
-    - ProjectSettings/PresetManager.asset
-    - ProjectSettings/ProjectSettings.asset
-    - ProjectSettings/ProjectVersion.txt
-    - ProjectSettings/QualitySettings.asset
-    - ProjectSettings/TagManager.asset
-    - ProjectSettings/TimeManager.asset
-    - ProjectSettings/UnityConnectSettings.asset
-    - ProjectSettings/VFXManager.asset
-    - ProjectSettings/VersionControlSettings.asset
-    - 
-    m_Values: 01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+    m_Keys: []
+    m_Values: 
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 
