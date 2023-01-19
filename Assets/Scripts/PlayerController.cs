@@ -1,24 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     private CharacterController controler;
     private Vector3 dir;
-    [SerializeField] private int speed;
+    [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
     [SerializeField] private float gravity;
+    [SerializeField] private int coins; 
     [SerializeField] private GameObject losePanel;
+    [SerializeField] private Text coinsText;
 
     private int lineToMove = 1;
     public float lineDistance = 4;
+    private  float MAX_SPEED = 110;
 
-    // Start is called before the first frame update
     void Start()
     {
         controler = GetComponent<CharacterController>();
-
+        StartCoroutine(SpeedIncrease());
     }
     private void Update()
     {
@@ -54,14 +57,13 @@ public class PlayerController : MonoBehaviour
             controler.Move(moveDir);
         else
             controler.Move(diff);
-            }
+        
+        }
 
     private void Jump()
     {
         dir.y = jumpForce;
     }
-
-    // Update is called once per frame
     void FixedUpdate()
     {
         dir.z = speed;
@@ -75,6 +77,26 @@ public class PlayerController : MonoBehaviour
         {
             losePanel.SetActive(true);
             Time.timeScale = 0;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "arm")
+        {
+            coins ++;
+            coinsText.text = coins.ToString();
+            Destroy(other.gameObject);
+        }
+    }
+
+    private IEnumerator SpeedIncrease()
+    {
+        yield return new  WaitForSeconds(4);
+        if (speed < MAX_SPEED)
+        {
+            speed += 3;
+            StartCoroutine(SpeedIncrease());
         }
     }
 }

@@ -42,6 +42,7 @@
      <Compile Include="Assets/Scripts/PlayerController.cs" />
      <Compile Include="Assets/Scripts/SwipeController.cs" />
      <Compile Include="Assets/Scripts/TileGenerator.cs" />
+     <Compile Include="Assets/Scripts/Coin.cs" />
     <Reference Include="UnityEngine">
         <HintPath>/home/daniel/Unity/Hub/Editor/2021.3.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
