@@ -355,6 +355,7 @@
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/CameraController.cs"
 "Assets/Scripts/Coin.cs"
+"Assets/Scripts/LosePanel.cs"
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/Score.cs"
 "Assets/Scripts/SpawnTraps.cs"

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     private CharacterController controler;
+    private CapsuleCollider col;
     private Vector3 dir;
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
@@ -22,6 +23,8 @@ public class PlayerController : MonoBehaviour
     {
         controler = GetComponent<CharacterController>();
         StartCoroutine(SpeedIncrease());
+        col = GetComponent<CapsuleCollider>();
+        Time.timeScale = 1;
     }
     private void Update()
     {
@@ -41,6 +44,11 @@ public class PlayerController : MonoBehaviour
         {
             if (lineToMove > 0)
                 lineToMove--;
+        }
+
+        if(SwipeController.swipeDown)
+        {
+            StartCoroutine(Slide());
         }
 
         Vector3 targetPosition = transform.position.z * transform.forward + transform.position.y * transform.up;
@@ -98,5 +106,18 @@ public class PlayerController : MonoBehaviour
             speed += 3;
             StartCoroutine(SpeedIncrease());
         }
+    }
+
+    private IEnumerator Slide()
+    {
+        col.center = new Vector3(0, -0.67F, 0);
+        col.height = 0.68F;
+        col.radius = 0.26F;
+
+        yield return new WaitForSeconds(1);
+
+        col.center = new Vector3(0, -0.02f, 0);
+        col.height = 1.976194F;
+        col.radius = 0.402793F; 
     }
 }
