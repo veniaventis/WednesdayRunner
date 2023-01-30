@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Score : MonoBehaviour
 {
     [SerializeField] private Transform player;
-    [SerializeField] private Text scoreText;
+    [SerializeField] public Text scoreText;
 
 
     private void  Update() 

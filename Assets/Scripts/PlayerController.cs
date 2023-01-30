@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private int coins; 
     [SerializeField] private GameObject losePanel;
     [SerializeField] private Text coinsText;
+    [SerializeField] private Score scoreScript;
 
     private int lineToMove = 1;
     public float lineDistance = 4;
@@ -25,6 +26,8 @@ public class PlayerController : MonoBehaviour
         StartCoroutine(SpeedIncrease());
         col = GetComponent<CapsuleCollider>();
         Time.timeScale = 1;
+        coins = PlayerPrefs.GetInt("coins");
+        coinsText.text = coins.ToString(); 
     }
     private void Update()
     {
@@ -84,6 +87,8 @@ public class PlayerController : MonoBehaviour
         if(hit.gameObject.tag == "obstacle")
         {
             losePanel.SetActive(true);
+            int lastRunScore = int.Parse(scoreScript.scoreText.text.ToString());
+            PlayerPrefs.SetInt("lastRunScore", lastRunScore);
             Time.timeScale = 0;
         }
     }
@@ -93,6 +98,7 @@ public class PlayerController : MonoBehaviour
         if(other.gameObject.tag == "arm")
         {
             coins ++;
+            PlayerPrefs.SetInt("coins", coins);
             coinsText.text = coins.ToString();
             Destroy(other.gameObject);
         }
@@ -103,7 +109,7 @@ public class PlayerController : MonoBehaviour
         yield return new  WaitForSeconds(4);
         if (speed < MAX_SPEED)
         {
-            speed += 3;
+            speed += 1;
             StartCoroutine(SpeedIncrease());
         }
     }

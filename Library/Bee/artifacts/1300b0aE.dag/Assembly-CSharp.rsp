@@ -359,6 +359,7 @@
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/Score.cs"
 "Assets/Scripts/SpawnTraps.cs"
+"Assets/Scripts/StartGame.cs"
 "Assets/Scripts/SwipeController.cs"
 "Assets/Scripts/TileGenerator.cs"
 -langversion:9.0
